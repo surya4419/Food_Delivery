@@ -20,7 +20,7 @@ export const addFood = async (req,res)=>{
         await food.save();
         res.json({success:true,message:"Food item added"})
     } catch (error) {
-        res.json({success,message:"Error"})
+        res.json({success:false,message:"Error"})
         
     }
 
