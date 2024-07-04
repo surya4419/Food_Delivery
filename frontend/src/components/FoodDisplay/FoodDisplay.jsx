@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './FoodDisplay.css'
 import { StoreContext } from '../../context/Storecontext'
-import Fooditem from '../Fooditem/Fooditem'
+import Fooditem from '../Fooditem/Fooditem.jsx'
 
 function FoodDisplay({category}) {
 

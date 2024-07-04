@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import axios from "axios";
 
-export const StoreContext = createContext(null)
+export const StoreContext = createContext(null) //new context to use throughout application
 
 const StoreContextProvider = (props) =>{
 
@@ -22,17 +22,7 @@ const StoreContextProvider = (props) =>{
    }
   }
 
-  /*const removeFromCart = (itemId) => {
-   setCartItems((prev) => {
-     const newCartItems = { ...prev };
-     if (newCartItems[itemId] === 1) {
-       delete newCartItems[itemId];
-     } else {
-       newCartItems[itemId] -= 1;
-     }
-     return newCartItems;
-   });
- }*/
+
  
   
  const removeFromCart = async (itemId) => {
@@ -57,6 +47,7 @@ const StoreContextProvider = (props) =>{
   const fetchFoodList = async () => {
     const response = await axios.get(url+"/api/food/list");
     setFoodlist(response.data.data)
+   
   }
 
   const loadCartData = async (token) =>{
@@ -72,9 +63,10 @@ const StoreContextProvider = (props) =>{
         setToken(localStorage.getItem("token"));
         await loadCartData(localStorage.getItem("token"))
       }
-    }
+    };
     loadData();
-  })
+  },[])
+    
   
 
 
@@ -87,10 +79,13 @@ const StoreContextProvider = (props) =>{
           getTotalCartAmount,
           url,
           token,
-          setToken
+          setToken,
+          fetchFoodList,
+          loadCartData
          
     }
     return(
+      //provider component will wrap your application and provide the context value to all children
        < StoreContext.Provider value={contextValue}>
           {props.children}
        </StoreContext.Provider>
