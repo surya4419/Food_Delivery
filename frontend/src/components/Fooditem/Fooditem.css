@@ -72,3 +72,22 @@
 .food-item-counter img{
     width: 30px;
 }
+
+.food-item-price button {
+    background-color: tomato;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-left:80px;
+    width:100px;
+    height:40px;
+}
+
+.food-item-price button:hover {
+    background-color: darkred;
+}

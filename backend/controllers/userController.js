@@ -72,4 +72,33 @@ const registerUser = async (req,res) => {
 
 }
 
-export { loginUser ,registerUser}
+// Middleware to verify token and extract user info
+const authenticateToken = (req, res, next) => {
+    const token = req.header('Authorization').replace('Bearer ', '');
+    if (!token) return res.status(401).json({ success: false, message: "Access denied. No token provided." });
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.userId = decoded.id;
+        next();
+    } catch (error) {
+        res.status(400).json({ success: false, message: "Invalid token." });
+    }
+};
+
+// Get user details
+const userDetails = async (req, res) => {
+    try {
+        const user = await userModel.findById(req.userId).select("-password"); // Exclude password
+        if (!user) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+        res.json({ success: true, user });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ success: false, message: "Error fetching user details" });
+    }
+};
+
+
+export { loginUser ,registerUser, authenticateToken,userDetails}

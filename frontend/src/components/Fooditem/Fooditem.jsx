@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import "./Fooditem.css"
 import { assets } from '../../assets/assets'
 import { StoreContext } from '../../context/Storecontext'
+import { Link } from 'react-router-dom'
 
 const Fooditem = ({_id,name,price,description,image}) => {
 
@@ -29,7 +30,7 @@ const Fooditem = ({_id,name,price,description,image}) => {
             <img src={assets.rating_starts} alt="" />
           </div>
           <p className='food-item-desc' >{description}</p>   
-          <p className='food-item-price' >${price}</p>
+          <p className='food-item-price' >${price}   <Link to="/Cart"><button onClick={()=>addToCart(_id)}>Buy Now</button></Link></p> 
         </div>
       </div>
     </div>
