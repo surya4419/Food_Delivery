@@ -51,4 +51,29 @@ const removeFood = async (req,res) =>{
       }
 }
 
-export  { listFood, removeFood};
+//search food list
+const search = async (req, res) => {
+    try {
+        // Get the search query from the request, default to an empty string if not provided
+        const query = (req.query.q || '').trim();
+        
+        // Ensure that query is a string
+        if (typeof query !== 'string') {
+            return res.status(400).json({ message: 'Invalid search query' });
+        }
+
+        // Perform the search using regex for case-insensitive matching
+        const results = await foodModel.find({
+            name: { $regex: query, $options: 'i' }
+        });
+
+        // Return the search results
+        res.json(results);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: 'Server Error' });
+    }
+};
+
+
+export  { listFood, removeFood,search};
