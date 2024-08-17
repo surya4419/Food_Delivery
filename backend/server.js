@@ -36,5 +36,3 @@ app.listen(port,()=>{
 
 
 
-//mongodb+srv://ganeshh4419:Surya123@cluster0.z9nze1m.mongodb.net/?
-//mongodb+srv://ganeshh4419:Surya123@cluster0.z9nze1m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
