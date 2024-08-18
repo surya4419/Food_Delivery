@@ -41,16 +41,30 @@ const removeFromCart = async (req,res) =>{
 }
  
 // fetch user cart data
-const getCart = async (req,res) => {
+const getCart = async (req, res) => {
     try {
-        let userData = await userModel.findById(req.body.userId);
-        let cartData = await userData.cartData;
-        res.json({success:true,cartData})
+        const userId = req.body.userId;
+        if (!userId) {
+            return res.status(400).json({ success: false, message: "User ID is required" });
+        }
+
+        // Find user by ID
+        const userData = await userModel.findById(userId);
+
+        // Check if user data was found
+        if (!userData) {
+            return res.status(404).json({ success: false, message: "User not found" });
+        }
+
+        // Access cart data
+        const cartData = userData.cartData;
+        res.json({ success: true, cartData });
         
-    }catch(error){
-        console.log(error);
-        res.json({success:false,message:"Error"})
+    } catch (error) {
+        console.error("Error in getCart:", error);
+        res.status(500).json({ success: false, message: "Internal server error" });
     }
 }
+
 
 export {addToCart,removeFromCart,getCart}

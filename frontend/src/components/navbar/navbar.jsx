@@ -51,8 +51,8 @@ const Navbar = ({ setShowLogin }) => {
           <button onClick={handleSearch} className="navbar-search-button">Search</button>
         </div>
         <div className='navbar-cart'>
-          <Link to='/cart'><img src={assets.basket_icon} alt="" /></Link>
-          <div className={getTotalCartAmount() === 0 ? '' : 'dot'}></div>
+          <Link to='/cart'><img src={assets.basket_icon} alt="" />
+          <div className={getTotalCartAmount() === 0 ? '' : 'dot'}></div></Link>
         </div>
         {!token ? (
           <button onClick={() => setShowLogin(true)}>sign in</button>
