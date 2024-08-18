@@ -34,7 +34,7 @@ const Navbar = ({ setShowLogin }) => {
     <div className='navbar'>
       <Link to='/'><img src="logo2.jpeg" alt="" className='logo' /></Link>
       <ul className='navbar-menu'>
-        <Link to="/" onClick={() => setMenu('home')} className={menu === 'home' ? 'active' : ''}>home</Link>
+       <li><Link to="/" onClick={() => setMenu('home')} className={menu === 'home' ? 'active' : ''}>home</Link></li> 
         <Link to="/menu" onClick={() => setMenu('menu')} className={menu === 'menu' ? 'active' : ''}>menu</Link>
         <Link to="/mobileapp" onClick={() => setMenu('mobile-app')} className={menu === 'mobile-app' ? 'active' : ''}>mobile-app</Link>
         <a href='#footer' onClick={() => setMenu('contact-us')} className={menu === 'contact-us' ? 'active' : ''}>contact-us</a>

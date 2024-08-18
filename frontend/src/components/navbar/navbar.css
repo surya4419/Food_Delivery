@@ -20,6 +20,10 @@
     justify-content: flex-start;
 }
 
+.navbar-menu li {
+    margin-left:20px;
+    padding-left:20px;
+}
 .navbar-right {
     display: flex;
     align-items: center;
