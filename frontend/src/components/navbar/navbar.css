@@ -54,7 +54,33 @@
     position: relative;
 }
 
-.navbar-search-icon .dot, .navbar-cart .dot {
+
+.navbar-cart {
+    position: relative;
+  }
+  
+  .dot {
+    position: absolute;
+    top: -5px; /* Adjusts the vertical position of the dot */
+    right: -5px; /* Adjusts the horizontal position of the dot */
+    width: 12px;
+    height: 12px;
+    background-color: tomato;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dot::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: tomato;
+  }
+.navbar-cart .dot {
     position: absolute;
     min-width: 10px;
     min-height: 10px;
