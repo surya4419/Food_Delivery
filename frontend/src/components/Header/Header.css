@@ -1,11 +1,12 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('./src/assets/header_img.png') no-repeat;
-    background-size: contain;
+    background: url('./src/assets/bg2.jpg') no-repeat;
+    background-size: cover;
+    
     position: relative;
     display:flex;
-   
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .header-contents {
@@ -57,5 +58,10 @@
     }
     .header-contents button{
         padding:2vw 4vw;
+    }
+    .header-contents h2{
+        font-weigth:300;
+        color:white;
+        font-size:max(2.5vw,12px);
     }
 }

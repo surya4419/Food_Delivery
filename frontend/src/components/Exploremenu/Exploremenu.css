@@ -36,6 +36,7 @@
     cursor:pointer;
     border-radius:50%;
     transition:0.2s;
+    
 }
 
 .explore-menu-list-item p{
@@ -44,8 +45,13 @@
     font-size: max(1.4vw,16px);
     cursor:pointer;
     margin-left:20px;
+    
 }
 
+.explore-menu-list-item img{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius:50%;
+}
 .explore-menu hr{
     margin: 10px 0px;
     height:2px;
