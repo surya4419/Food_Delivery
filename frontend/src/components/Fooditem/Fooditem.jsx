@@ -30,7 +30,17 @@ const Fooditem = ({_id,name,price,description,image}) => {
             <img src={assets.rating_starts} alt="" />
           </div>
           <p className='food-item-desc' >{description}</p>   
-          <p className='food-item-price' >${price}   <Link to="/Cart"><button onClick={()=>addToCart(_id)}>Buy Now</button></Link></p> 
+          <p className='food-item-price'>${price}   
+             <Link to="/Cart">
+                <button onClick={() => {
+                  addToCart(_id);
+                   window.scrollTo(0, 0); // Scroll to the top of the page
+                 }}>
+                  Buy Now
+                  </button>
+              </Link>
+          </p>
+
         </div>
       </div>
     </div>
