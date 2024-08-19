@@ -6,7 +6,7 @@ export const StoreContext = createContext(null) //new context to use throughout 
 const StoreContextProvider = (props) =>{
 
   const [cartItems,setCartItems] = useState({});
-  const url = 'http://localhost:4000';
+  const url = 'https://pumatobackend.onrender.com';
   const [token,setToken] = useState("");
   const [food_list,setFoodlist]  = useState([])
 
