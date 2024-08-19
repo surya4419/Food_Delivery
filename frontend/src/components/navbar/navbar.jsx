@@ -50,6 +50,7 @@ const Navbar = ({ setShowLogin }) => {
           />
           <button onClick={handleSearch} className="navbar-search-button">Search</button>
         </div>
+        <div className="navbar-cart-login">
         <div className='navbar-cart'>
           <Link to='/cart'><img src={assets.basket_icon} alt="" />
           <div className={getTotalCartAmount() === 0 ? '' : 'dot'}></div></Link>
@@ -68,7 +69,7 @@ const Navbar = ({ setShowLogin }) => {
               <li onClick={logout}><img src={assets.logout_icon} alt="" /><p>Logout</p></li>
             </ul>
           </div>
-        )}
+        )}</div>
       </div>
     </div>
   );
