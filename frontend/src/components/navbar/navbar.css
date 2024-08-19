@@ -221,11 +221,7 @@
         margin-top:5px;
     }
 
-    .navbar-cart-login{
-        justify-content: flex-start;
-        width:100%;
-        margin-top:5px;
-    }
+
 
     .navbar-search-input {
         width: 150px; /* Adjusted for small screens */
@@ -242,12 +238,13 @@
     .navbar-cart,
     .navbar-profile {
         display: flex;
-        justify-content: flex-end; /* Align to the right */
+        justify-content: flex-start; /* Align to the right */
         width: 100%;
     }
 
     .navbar-cart {
-        margin-bottom: 10px; /* Add some space between the cart and the login button */
+        margin-bottom: 10px;
+         /* Add some space between the cart and the login button */
     }
 }
 
