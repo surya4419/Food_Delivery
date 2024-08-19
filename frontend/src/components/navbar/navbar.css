@@ -214,39 +214,23 @@
     .navbar-menu {
         display: none;
     }
-
     .navbar-search {
-        justify-content: flex-start;
+        justify-content: flex-end;
         width: 100%;
-        margin-top:5px;
     }
-
-
-
     .navbar-search-input {
-        width: 150px; /* Adjusted for small screens */
+        width: 150px;
         max-width: 150px;
     }
-
     .navbar-right {
-        flex-direction: column; /* Stack items vertically */
-        gap: 10px;
-        width: 100%; /* Take up full width */
-        align-items: flex-start; /* Align items to the right */
-    }
-
-    .navbar-cart,
-    .navbar-profile {
         display: flex;
-        justify-content: flex-start; /* Align to the right */
+        justify-content: center; /* Centering the cart icon and login button */
+        gap: 10px;
         width: 100%;
-    }
-
-    .navbar-cart {
-        margin-bottom: 10px;
-         /* Add some space between the cart and the login button */
+        margin-top: 10px; /* Add margin for spacing above the new line */
     }
 }
+
 
 
 @media (max-width: 600px) {
