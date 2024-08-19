@@ -25,10 +25,9 @@ const Verify = () => {
 
     useEffect(()=>{
         verifyPayment()
-    },[])
+    },[]);
 
-    return 
-  (
+    return (
     <div className='verify'>
         <div className='spinner'></div>
 

@@ -1,7 +1,7 @@
 .header{
     height: 34vw;
     margin: 30px auto;
-    background: url('./src/assets/bg2.jpg') no-repeat;
+    background: url('./src/assets/bg.png') no-repeat;
     background-size: cover;
     
     position: relative;
@@ -22,7 +22,7 @@
 }
 
 .header-contents h2{
-    font-weigth:500;
+    font-weight:500;
     color:white;
     font-size:max(4.5vw,22px);
 }
@@ -35,7 +35,7 @@
 .header-contents button{
     border: none;
     color: #747474;
-    font-weigth: 500;
+    font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
     font-size: max(1vw,13px);
@@ -60,7 +60,7 @@
         padding:2vw 4vw;
     }
     .header-contents h2{
-        font-weigth:300;
+        font-weight:300;
         color:white;
         font-size:max(2.5vw,12px);
     }
