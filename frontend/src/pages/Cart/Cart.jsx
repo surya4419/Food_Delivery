@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import './Cart.css';
 import { StoreContext } from '../../context/Storecontext';
 import { useNavigate } from 'react-router-dom';
+import { assets } from '../../assets/assets.js';
 
 const Cart = () => {
-  const { cartItems, food_list, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
+  const { cartItems, food_list, addToCart, removeFromCart, getTotalCartAmount, url } = useContext(StoreContext);
   const navigate = useNavigate();
 
   return (
@@ -16,27 +17,31 @@ const Cart = () => {
           <p>Price</p>
           <p>Quantity</p>
           <p>Total</p>
-          <p>Remove</p>
+          <p>Add/Remove</p>
         </div>
         <br />
         <hr />
         {food_list.map((item) => {
           if (cartItems[item._id] > 0) {
             return (
-              <div key={item._id}> {/* Added key prop here */}
+              <div key={item._id}>
                 <div className="cart-items-title cart-items-item">
                   <img src={url + "/images/" + item.image} alt={item.name} />
                   <p>{item.name}</p>
-                  <p>{item.price}</p>
+                  <p>${item.price}</p>
                   <p>{cartItems[item._id]}</p>
                   <p>${item.price * cartItems[item._id]}</p>
-                  <p onClick={() => removeFromCart(item._id)} className='cross'>X</p>
+                  <p className='add'>
+                    <img onClick={() => removeFromCart(item._id)} src={assets.remove_icon_red} alt="Remove" />
+                   <span>{cartItems[item._id]}</span> 
+                    <img onClick={() => addToCart(item._id)} src={assets.add_icon_green} alt="Add" />
+                  </p>
                 </div>
                 <hr />
               </div>
             );
           }
-          return null; // Return null if the condition is not met
+          return null;
         })}
       </div>
       <div className="cart-bottom">
