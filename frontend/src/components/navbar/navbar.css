@@ -216,8 +216,15 @@
     }
 
     .navbar-search {
-        justify-content: flex-end;
+        justify-content: flex-start;
         width: 100%;
+        margin-top:5px;
+    }
+
+    .navbar-cart-login{
+        justify-content: flex-start;
+        width:100%;
+        margin-top:5px;
     }
 
     .navbar-search-input {
