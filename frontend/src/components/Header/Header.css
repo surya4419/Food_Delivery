@@ -1,11 +1,11 @@
-.header {
+.header{
     height: 34vw;
     margin: 30px auto;
-    background: url('../../assets/bg2.jpg') no-repeat;
+    background: url('../../assets/') no-repeat;
     background-size: cover;
     
     position: relative;
-    display: flex;
+    display:flex;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -13,79 +13,55 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
+    align-items:start;
+    gap:1.5vw;
+    max-width:50%;
+    bottom:10%;
+    left:6vw;
     animation: fadeIn 3s;
 }
 
-.header-contents h2 {
-    font-weight: 500;
-    color: white;
-    font-size: max(4.5vw, 22px);
+.header-contents h2{
+    font-weight:500;
+    color:white;
+    font-size:max(4.5vw,22px);
 }
 
-.header-contents p {
-    color: white;
-    font-size: 1vw;
+.header-contents p{
+    color:white;
+    font-size:1vw;
 }
 
-.header-contents button {
+.header-contents button{
     border: none;
     color: #747474;
     font-weight: 500;
     padding: 1vw 2.3vw;
     background-color: white;
-    font-size: max(1vw, 13px);
+    font-size: max(1vw,13px);
     border-radius: 50px;
 }
 
-/* Add search input styles */
-.header-contents .search-input {
-    width: 100%;
-    padding: 0.8vw;
-    font-size: 1vw;
-    border-radius: 25px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    outline: none;
-}
-
-/* Adjustments for smaller screens */
-@media (max-width: 1050px) {
-    .header-contents {
-        max-width: 45%;
-    }
-
-    .header-contents .search-input {
-        font-size: 1.2vw;
-        padding: 1vw;
+@media (max-width:1050px){
+   
+    .header-contents{
+        max-width:45%;
     }
 }
 
-@media (max-width: 750px) {
-    .header-contents {
-        max-width: 65%;
+@media (max-width:750px) {
+    .header-contents{
+        max-width:65%;
     }
-
-    .header-contents p {
-        display: none;
+    .header-contents p{
+        display:none;
     }
-
-    .header-contents button {
-        padding: 2vw 4vw;
+    .header-contents button{
+        padding:2vw 4vw;
     }
-
-    .header-contents h2 {
-        font-weight: 300;
-        color: white;
-        font-size: max(2.5vw, 12px);
-    }
-
-    .header-contents .search-input {
-        font-size: 3vw;
-        padding: 1.5vw;
+    .header-contents h2{
+        font-weight:300;
+        color:white;
+        font-size:max(2.5vw,12px);
     }
 }
