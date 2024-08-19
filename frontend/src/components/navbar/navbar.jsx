@@ -19,7 +19,7 @@ const Navbar = ({ setShowLogin }) => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:4000/api/food/search?q=${encodeURIComponent(query)}`);
+      const response = await axios.get(`https://pumatobackend.onrender.com/api/food/search?q=${encodeURIComponent(query)}`);
       navigate('/search', { state: { results: response.data } });
     } catch (error) {
       console.error('Error fetching search results:', error);
