@@ -214,23 +214,36 @@
     .navbar-menu {
         display: none;
     }
+
     .navbar-search {
-        justify-content: flex-end;
         width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 10px; /* Add some spacing between search and cart/login */
     }
+
     .navbar-search-input {
-        width: 150px;
+        width: 150px; /* Keep the search input on the same line as the search button */
         max-width: 150px;
     }
+
+    .navbar-search-button {
+        padding: 5px;
+    }
+
     .navbar-right {
-        display: flex;
-        justify-content: center; /* Centering the cart icon and login button */
-        gap: 10px;
         width: 100%;
-        margin-top: 10px; /* Add margin for spacing above the new line */
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .navbar-cart,
+    .navbar-profile {
+        display: inline-flex; /* Align cart and login side by side */
+        align-items: start;
     }
 }
-
 
 
 @media (max-width: 600px) {
