@@ -216,12 +216,18 @@
         justify-content: flex-end;
         width: 100%;
     }
+    .navbar-cart{
+        justify-content: flex-end;
+        width:100;
+        margin:5px;
+    }
     .navbar-search-input {
         width: 150px; /* Adjusted for small screens */
         max-width: 150px;
     }
     .navbar-right {
         gap: 10px;
+       margin:5px;
     }
     .navbar-search-button {
         padding: 5px;
