@@ -232,7 +232,7 @@
         flex-direction: column; /* Stack items vertically */
         gap: 10px;
         width: 100%; /* Take up full width */
-        align-items: flex-end; /* Align items to the right */
+        align-items: flex-start; /* Align items to the right */
     }
 
     .navbar-cart,
