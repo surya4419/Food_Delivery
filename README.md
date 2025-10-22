@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+
 # Full Stack Food Delivery Website
 
-FFSquads is a full-stack food delivery application built using React, MongoDB, Express, Node.js, and Stripe. This project aims to provide a seamless experience for users to order food online, manage their orders, and make secure payments.
+pumatos is a full-stack food delivery application built using React, MongoDB, Express, Node.js, and Stripe. This project aims to provide a seamless experience for users to order food online, manage their orders, and make secure payments.
 
 ## Project Description
 
-The FFSquads application allows users to browse a variety of food options, place orders, and manage their profiles. The frontend is developed using React, providing a dynamic and responsive user interface, while the backend is powered by Node.js and Express, handling data management and business logic.
+The pumato application allows users to browse a variety of food options, place orders, and manage their profiles. The frontend is developed using React, providing a dynamic and responsive user interface, while the backend is powered by Node.js and Express, handling data management and business logic.
 
 ## Technologies Used
 
@@ -54,7 +54,4 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the ISC License.
-=======
-Full Stack Food Delivery Website In React JS, MongoDB, Express, Node JS & Stripe
-website url = "https://pumato.onrender.com/"
->>>>>>> f80369b4ff3db5c91e3226fce68d09d09a2a4a2a
+
